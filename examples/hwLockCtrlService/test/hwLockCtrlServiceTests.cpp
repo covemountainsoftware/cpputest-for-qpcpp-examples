@@ -32,7 +32,7 @@
 #include "cmsTestPublishedEventRecorder.hpp"
 #include "hwLockCtrlSelfTestEvent.hpp"
 #include "bspTicks.hpp"
-#include "qassertMockSupport.hpp"
+#include "cmsQAssertMockSupport.hpp"
 #include "pingPongEvents.hpp"
 #include "cmsDummyActiveObject.hpp"
 
@@ -341,8 +341,8 @@ TEST(HwLockCtrlServiceTests, the_service_responds_to_a_ping_with_a_pong)
 
     Pong pongEvent(0);
 
-    auto dummy = std::unique_ptr<cms::DefaultDummyActiveObject>(
-      new cms::DefaultDummyActiveObject());
+    auto dummy = std::unique_ptr<cms::test::DefaultDummyActiveObject>(
+      new cms::test::DefaultDummyActiveObject());
     dummy->SetPostedEventHandler([&pongEvent](const QP::QEvt* event) {
         auto p             = static_cast<const Pong*>(event);
         pongEvent.sig      = p->sig;
