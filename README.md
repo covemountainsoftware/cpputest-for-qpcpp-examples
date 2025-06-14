@@ -20,9 +20,8 @@ For more details, please see https://github.com/covemountainsoftware/cpputest-fo
 
 # Environment
 
-This project was developed and proven in Ubuntu 20.04 and 22.04. In theory any 
-build or host operating system environment supported by CppUTest will 
-be compatible with this code.
+In theory any build or host operating system environment supported by CppUTest will 
+be compatible with this code. Developed primarily in Ubuntu, now at 24.04.
 
 ## Prerequisites
 * CMake and associated build tools were used to develop
@@ -32,8 +31,8 @@ be compatible with this code.
   * After cloning this repository, do not forget to:
   * `git submodule init`
   * `git submodule update` 
-* CppUTest (version 3.8-7 or version 4.0) (3.8 is the default in Ubuntu 20.04 while 4.0 is the default in Ubuntu 22.04)
-* This project requires support for C++14 and C11.
+* CppUTest (version 4.0) (may support older versions, but no longer confirmed.)
+* This project requires support for C++17 and C11.
 
 ## Continuous Integration
 
